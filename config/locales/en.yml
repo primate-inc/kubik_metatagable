@@ -1,0 +1,9 @@
+en:
+  kubik_metatagable:
+    defaults_saved: 'Saved sitewide meta tags'
+    defaults_not_saved: 'Could not save sitewide meta tags'
+    defaults_last_updated: 'Metatags last updated %{last_updated}' 
+    defaults_form:
+      legend: 'Sitewide Meta Tags'
+      submit: 'Update'
+      cancel: 'Cancel'

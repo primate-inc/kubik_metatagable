@@ -1,0 +1,8 @@
+<turbo-frame id="<%= dom_class(Kubik::MetaTagDefaults) %>">
+  <% flash.map do |type, message| %>
+    <div class="alert alert--<%= type %>">
+      <%= message %>
+    </div>
+  <% end %>
+  <%= render 'form' %>
+</turbo-frame>

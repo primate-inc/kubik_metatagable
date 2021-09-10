@@ -5,7 +5,7 @@ require "rails/all"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-require "kubik_metataggable"
+require "kubik_metatagable"
 
 module Dummy
   class Application < Rails::Application
