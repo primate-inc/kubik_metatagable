@@ -1,7 +1,6 @@
 <%= form_for :meta_tag_defaults, url: kubik_meta_tag_defaults_path, method: :put, class: 'kubik-form' do |f| %>
   <fieldset class="kubik-form-fieldset">
     <legend><%= t('kubik_metatagable.defaults_form.legend') %></legend>
-
     <% if @meta_tag_defaults&.errors&.any? %>
       <ul class="kubik-form-errors">
         <% @meta_tag_defaults.errors.full_messages.each do |errors| %>
@@ -9,7 +8,7 @@
         <% end %>
       </ul>
     <% end %>
-    <% Kubik::MetaTagDefaults.meta_tag.each do |tag, value| %>
+    <% Kubik::MetaTagDefaults.find_by(var: 'meta_tag').value.each do |tag, value| %>
       <div class="kubik-form-input-group">
         <%= f.label tag, tag.to_s.humanize.titleize, class: 'kubik-form-input-label' %>
         <%= f.text_field tag, value: value, class: 'kubik-form-input kubik-form-input--text-field' %>
